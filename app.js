@@ -1,4 +1,10 @@
 // app.js
+document.getElementById("campo-pesquisa").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        pesquisar();
+    }
+});
+
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa");
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
@@ -39,7 +45,10 @@ function pesquisar() {
 function mostrarPopup(mensagem) {
     const popup = document.getElementById('popup');
     popup.querySelector('p').textContent = mensagem;
-    popup.style.display = 'block';
+    popup.classList.add('show');
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 3000); // Fecha o popup automaticamente após 3 segundos
 }
 
 function fecharPopup() {
