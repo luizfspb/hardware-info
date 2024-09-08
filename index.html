@@ -16,6 +16,9 @@
                 <input type="text" placeholder="Digite o nome do componente ou termo" id="campo-pesquisa">
                 <button onclick="pesquisar()">Pesquisar</button>
             </div>
+            <div class="menu-options">
+                <a href="javascript:void(0);" onclick="iniciarQuiz()">Iniciar Quiz</a>
+            </div>
         </nav>
         <h1>Guia Completo de Hardware</h1>
     </header>
@@ -31,6 +34,16 @@
         <p>Pesquisa não encontrada!</p>
         <button onclick="fecharPopup()">Fechar</button>
     </div>
+    <div id="quiz-popup" class="popup">
+        <div id="quiz-content"></div>
+        <button id="prev-btn" onclick="paginaAnterior()">Anterior</button>
+        <button id="next-btn" onclick="proximaPagina()">Próxima</button>
+        <button id="submit-btn" onclick="enviarRespostas()" style="display:none;">Enviar Respostas</button>
+    </div>
+    <div id="resultado-popup" class="popup">
+        <p id="resultado-mensagem"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="dados.js"></script>
     <script src="app.js"></script>
 </body>

@@ -28,7 +28,7 @@ body {
 
 header nav {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #FFFFFF;
@@ -37,7 +37,7 @@ header nav {
 }
 
 header .logo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     position: absolute; /* Posiciona a logo à esquerda */
     left: 2rem;
@@ -46,6 +46,7 @@ header .logo {
 header .search-bar {
     display: flex;
     align-items: center;
+    margin: 0 auto; /* Centraliza a barra de pesquisa */
 }
 
 header .search-bar input {
@@ -63,6 +64,20 @@ header .search-bar button {
     background-color: #30475E;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+header .menu-options {
+    margin-left: auto; /* Empurra o contêiner para a direita */
+}
+
+header .menu-options a {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #30475E;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* Estiliza os títulos h1 */
